@@ -1,0 +1,37 @@
+/* ---------- GLOBAL ---------- */
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f4f4f4; }
+.container { max-width:960px; margin:auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,.1); }
+h1 { text-align:center; color:#333; margin-bottom:20px; }
+h2 { margin-top:20px; color:#555; }
+footer { text-align:center; margin-top:30px; color:#777; font-size:.9em; }
+
+/* ---------- FORM ---------- */
+form { display:grid; gap:10px; margin-bottom:20px; }
+label { font-weight:bold; }
+input, button { padding:8px; border:1px solid #ddd; border-radius:4px; width:100%; }
+input:focus { outline:none; border-color:#007BFF; }
+button { background:#007BFF; color:#fff; border:none; cursor:pointer; font-weight:bold; }
+button:hover { background:#0056b3; }
+
+/* ---------- NAV ---------- */
+nav { margin-bottom:20px; text-align:right; }
+nav a { margin-left:15px; color:#007BFF; text-decoration:none; font-weight:bold; }
+nav a:hover { text-decoration:underline; }
+
+/* ---------- TABLE ---------- */
+table { width:100%; border-collapse:collapse; margin-top:10px; table-layout:fixed; }
+th, td { border:1px solid #ddd; padding:8px; text-align:left; word-wrap:break-word; }
+th { background:#f2f2f2; font-weight:bold; }
+
+/* ---------- BUTTON COPY ---------- */
+.copy-button { background:#28a745; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer; font-size:.9em; }
+.copy-button:hover { background:#218838; }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:600px){
+    .container{padding:10px;}
+    nav{text-align:center;}
+    nav a{margin:0 8px; display:inline-block;}
+    th,td{font-size:12px; padding:6px;}
+}
