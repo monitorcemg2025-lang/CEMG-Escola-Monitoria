@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatórios PDF – SEDUC</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Bibliotecas locais (sem CDN) -->
+    <script defer src="lib/jspdf.umd.min.js"></script>
+    <script defer src="lib/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatórios em PDF</h1>
+        <nav>
+            <a href="main.html">Horários</a>
+            <a href="absences.html">Faltas</a>
+            <a href="students.html">Alunos</a>
+            <a href="reports.html">PDF</a>
+        </nav>
+
+        <h2>Faltas</h2>
+        <button onclick="generateAbsencesPDF('daily')">Diário</button>
+        <button onclick="generateAbsencesPDF('weekly')">Semanal</button>
+        <button onclick="generateAbsencesPDF('monthly')">Mensal</button>
+
+        <h2>Horários</h2>
+        <button onclick="generateSchedulesPDF('daily')">Diário</button>
+        <button onclick="generateSchedulesPDF('weekly')">Semanal</button>
+        <button onclick="generateSchedulesPDF('monthly')">Mensal</button>
+    </div>
+    <footer><p>© 2025 Luiz Felipe</p></footer>
+
+    <script>
+        if (!localStorage.getItem('loggedIn')) location.href='index.html';
+    </script>
+    <script defer src="js/reports.js"></script>
+</body>
+</html>
