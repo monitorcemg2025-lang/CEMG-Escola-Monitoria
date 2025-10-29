@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horários – SEDUC</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Horários do Monitor</h1>
+        <nav>
+            <a href="main.html">Horários</a>
+            <a href="absences.html">Faltas</a>
+            <a href="students.html">Alunos</a>
+            <a href="reports.html">PDF</a>
+        </nav>
+
+        <form id="schedule-form">
+            <label for="monitor-name">Nome do Monitor:</label>
+            <input type="text" id="monitor-name" required placeholder="Ex: Luiz Silva">
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" required>
+
+            <label for="entry-time">Entrada:</label>
+            <input type="time" id="entry-time" required>
+
+            <label for="exit-time">Saída:</label>
+            <input type="time" id="exit-time" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+
+        <h2>Horários Registrados</h2>
+        <table id="schedule-table">
+            <thead><tr><th>Monitor</th><th>Data</th><th>Entrada</th><th>Saída</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <footer><p>© 2025 Luiz Felipe</p></footer>
+
+    <script>
+        if (!localStorage.getItem('loggedIn')) location.href='index.html';
+    </script>
+    <script defer src="js/schedules.js"></script>
+</body>
+</html>
